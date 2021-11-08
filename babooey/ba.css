@@ -50,3 +50,19 @@ li {
     background-color: var(--btnBg);
   }
   .btn:focus { outline-style: none; }
+ 
+  .box {
+    width: 90%;
+    margin: 30px;
+    background:rgb(255, 77, 77);
+    color:#fff;
+  }
+  #box1 {
+  
+  }
+  #box2 {
+  
+  }
+  #box3 {
+  
+  }
