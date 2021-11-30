@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>links to Jquery</title>
+        <link rel="stylesheet" href="main.css">
+  </head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("p").click(function(){
+    $(this).hide();
+  });
+});
+</script>
+</head>
+<body>
+  <p>Hey guess what? you should click here to go to https://jquery.com/</p>
+<p>and me too to go to https://jqueryui.com/</p>
+<p>okay for reals, this time look in the accordians</p>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.accordion {
+  background-color: rgb(177, 178, 231);
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
+
+.active, .accordion:hover {
+  background-color: #ccc;
+}
+
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+</style>
+</head>
+<body>
+
+<h2>Heres the start hehe...</h2>
+<p>Click on the buttons to open the collapsible content.</p>
+
+<button class="accordion">Section 1</button>
+<div class="panel">
+  <p>So i dont know what to really say but if you hit "section 2" youll probably find out.</p>
+</div>
+
+<button class="accordion">Section 2</button>
+<div class="panel">
+  <p>Okay time to get serious, now its time to hit "section 3".</p>
+</div>
+
+<button class="accordion">Section 3</button>
+<div class="panel">
+  <p>Now that ive got your attention click the buttons.</p>
+</div>
+
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight) {
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    } 
+  });
+}
+</script>
+
+<!-- Button -->
+<h2 class="demoHeaders">Click me!</h2>
+<button id="button">nothing will happen</button>
+<button id="button-icon">go to...</button>
+</div>
+
+<h1>ANOTHER TEST OF YOUR WILL</h1>
+
+<div class="slidecontainer">
+  
+  <p>slide the dot all the way to the left and youll get the links my boy</p>
+  <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+</div>
+<style>
+  body {font-family: Arial;}
+  
+  /* Style the tab */
+  .tab {
+    overflow: hidden;
+    border: 1px solid rgb(177, 178, 231);
+    background-color: #9ae0db;
+  }
+  
+  /* Style the buttons inside the tab */
+  .tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+  }
+  
+  /* Change background color of buttons on hover */
+  .tab button:hover {
+    background-color: rgb(223, 176, 176);
+  }
+  
+  /* Create an active/current tablink class */
+  .tab button.active {
+    background-color: rgb(89, 71, 104);
+  }
+  
+  /* Style the tab content */
+  .tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid rgb(177, 178, 231);
+    border-top: none;
+  }
+  </style>
+  </body>
+</head>
+<body>
+
+<h2>"Here we go Again""</h2>
+<p>Maybe this is it</p>
+
+<div class="tab">
+  <button class="tablinks" onclick="openCity(event, 'i promise this is it')">come on</button>
+  <button class="tablinks" onclick="openCity(event, '2')">Anotha one</button>
+  <button class="tablinks" onclick="openCity(event, 'one')">you got this</button>
+</div>
+
+<div id="i promise this is it" class="tabcontent">
+  <h3>Link 1</h3>
+  <body>
+
+    <h2>CONGRATS</h2>
+    
+    
+    <p id="demo"></p>
+    
+    <script>
+    let text = "Jquery";
+    let result = text.link("https://jquery.com/");
+    document.getElementById("demo").innerHTML = result;
+    </script>
+    
+    </body>
+</div>
+
+<div id="2" class="tabcontent">
+  <h3>Link 2</h3>
+  <p><a href="https://jqueryui.com/" target="_blank">JqueryUI</a>.</p>
+</div>
+
+<div id="one" class="tabcontent">
+  <h3>In Conclusion.</h3>
+  <p>sorry for the goose chase :></p>
+</div>
+
+<script>
+function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+</script>
+   
+</body>
+</html> 
+</html>
